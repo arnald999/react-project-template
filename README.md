@@ -157,3 +157,28 @@
 > To run the project:
 
     npm run dev
+
+> Adding ESLint, install eslint, @typescript-eslint/eslint-plugin, @typescript-eslint/parser as developer dependencies
+
+    npm i -D eslint @typescript-eslint/{eslint-plugin,parser}
+
+> Configure ESLint, create .eslintrc.json
+
+    {
+        "extends": ["eslint:recommended"],
+        "parser": "@typescript-eslint/parser",
+        "plugins": ["@typescript-eslint"],
+        "env": { "node": true },
+        "parserOptions": {
+            "ecmaVersion": 5,
+            "sourceType": "module"
+        },
+        "_comment": "Removing 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended' from 'extends' and adding 'no-unused-vars': 'off' and '@typescript-eslint/no-unused-vars': '['error']' configuration turns off the base ESLint rule and enables the typescript-eslint rule instead. The typescript-eslint rule understands how to analyze TypeScript source code and will still catch normal JavaScript based unused variables.",
+        "rules": {
+            "no-console": "warn",
+            "@typescript-eslint/indent": ["error", 2],
+            "semi": ["error", "never"],
+            "no-unused-vars": "off",
+            "@typescript-eslint/no-unused-vars": ["error"]
+        }
+    }
