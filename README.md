@@ -182,3 +182,14 @@
             "@typescript-eslint/no-unused-vars": ["error"]
         }
     }
+
+> Installing React Router Dependencies
+
+    npm i react-router react-router-dom
+    npm install --save @types/react-router-dom @types/react-router
+
+> Installing Material UI dependencies to build Header for the application
+
+    npm install @material-ui/core @mui/icons-material @mui/material
+    npm install --save @material-ui/core @material-ui/icons
+    npm i @emotion/react @emotion/styled

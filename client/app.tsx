@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Numbers from './numbers';
+import { RouterConfig } from './src/routes/RouterConfig';
 
 ReactDOM.render(
-    <Numbers initValue={42} />,
+    <RouterConfig />,
     document.getElementById('app') as HTMLElement
   );
