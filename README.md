@@ -40,10 +40,13 @@
             "rootDir": ".",
             "removeComments": true,
             "strict": true,
+            "strictFunctionTypes": true,
+            "noImplicitAny": true,
             "moduleResolution": "node",            
             "allowSyntheticDefaultImports": true,
             "esModuleInterop": true,
-            "experimentalDecorators": true
+            "experimentalDecorators": true,
+            "resolveJsonModule": true,
         },
         "include": [
             "./client"
@@ -170,7 +173,7 @@
         "plugins": ["@typescript-eslint"],
         "env": { "node": true },
         "parserOptions": {
-            "ecmaVersion": 5,
+            "ecmaVersion": 12,
             "sourceType": "module"
         },
         "_comment": "Removing 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended' from 'extends' and adding 'no-unused-vars': 'off' and '@typescript-eslint/no-unused-vars': '['error']' configuration turns off the base ESLint rule and enables the typescript-eslint rule instead. The typescript-eslint rule understands how to analyze TypeScript source code and will still catch normal JavaScript based unused variables.",

@@ -11,10 +11,10 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const config = {
   mode: 'development',
-  entry: app_dir + '/app.tsx',
+  entry: app_dir + '/App.tsx',
   output: {
     path: __dirname + '/dist',
-    filename: 'app.js',
+    filename: 'App.js',
     publicPath: '/'
   },
   module: {
